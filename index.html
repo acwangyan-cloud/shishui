@@ -2,17 +2,6 @@
 <html lang="zh">
 <head>
   <meta charset="UTF-8">
-  <title>Hello 湿地植物</title>
-</head>
-<body>
-  <h1>Hello 湿地植物 🌱</h1>
-  <p>这是我的第一个 GitHub Pages 页面！</p>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="zh">
-<head>
-  <meta charset="UTF-8">
   <title>湿地植物图鉴</title>
   <style>
     body {
@@ -26,23 +15,29 @@
     }
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      gap: 1.5em;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); /* 调大卡片最小宽度 */
+      gap: 2em; /* 增加间距 */
     }
     .card {
       background: white;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
       padding: 1em;
       text-align: center;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .card:hover {
+      transform: scale(1.02);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
     }
     .card img {
-      width: 100%;
+      max-width: 100%;
       height: auto;
-      border-radius: 8px;
+      border-radius: 10px;
+      object-fit: cover;
     }
     .card h2 {
-      margin: 0.5em 0;
+      margin: 0.8em 0;
       color: seagreen;
     }
   </style>
@@ -55,12 +50,16 @@
     <div class="card">
       <img src="images/bichiyanzicai.jpg" alt="篦齿眼子菜">
       <h2>篦齿眼子菜</h2>
-      <p>芦苇是湿地常见植物，有助于水质净化，并为鸟类提供栖息地。</p>
+      <p>沉水植物，有助于维持水体透明度和水生态平衡。</p>
     </div>
- <div class="grid">
+
     <!-- 千屈菜 -->
     <div class="card">
       <img src="images/qianqucai.jpg" alt="千屈菜">
       <h2>千屈菜</h2>
-      <p>多年生挺水草本，株高0.5–1.5米，叶对生，窄长。生于湿地及浅水区。花期6–9月，花紫红色，花序穗状。适应性强，生态功能突出。</p>
+      <p>多年生挺水草本，生于湿地及浅水区，花紫红色，花期6–9月。</p>
     </div>
+  </div>
+</body>
+</html>
+
