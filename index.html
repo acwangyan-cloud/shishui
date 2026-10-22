@@ -5,8 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="2025年美境行动：北京六处城市公园湿地植物调查与科普展示。查找植物、放大照片、记录观察与反馈。">
   <title>北京市城市公园湿地植物介绍</title>
-  <link rel="stylesheet" href="styles.css?v=20261022-clean">
-  <script src="app.js?v=20261022-fieldguide" defer></script>
+  <link rel="stylesheet" href="styles.css?v=20261022-feedback">
+  <script src="app.js?v=20261022-feedback" defer></script>
+  <script src="feedback.js?v=20261022-feedback" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#plants">跳到植物图鉴</a>
@@ -97,7 +98,7 @@
         <button id="clear-filters" class="secondary" type="button" disabled data-js-enable>清除筛选</button>
         <p id="result-count" class="result-count" role="status" aria-live="polite">共25张植物卡片</p>
       </div>
-      <noscript><p class="notice">当前浏览器未启用 JavaScript。仍可阅读全部卡片、点击照片查看原图；搜索、放大弹窗和反馈预览需要启用 JavaScript。</p></noscript>
+      <noscript><p class="notice">当前浏览器未启用 JavaScript。仍可阅读全部卡片、点击照片查看原图；搜索、放大弹窗和公开留言需要启用 JavaScript。</p></noscript>
       <p id="no-results" class="empty-state" hidden>没有找到匹配的植物。试试更短的关键词，或点击“清除筛选”查看全部卡片。</p>
       <div class="grid">
     <article class="card" id="plant-xingcai" data-plant-card data-name="荇菜" data-habit="floating" data-search="荇菜 Nymphoides peltata 浮叶 叶片近圆，基部有心形缺口；金黄色花冠五裂，裂片边缘呈流苏状。 池塘、湖泊等较平静水体。 ">
@@ -558,9 +559,8 @@
         <p class="section-kicker">让一次观察留下记录</p>
         <h2 id="participate-title">参与观察与纠错</h2>
         <p>在城市公园发现了这些植物，或发现卡片里有值得核对的地方？记下看到的特征和观察地点，分享你的发现。</p>
-        <p class="privacy-note"><strong>公开反馈提示：</strong>本页先生成预览，不会自动上传。点击“前往 GitHub 确认提交”后，需要登录 GitHub 并再次提交；内容和 GitHub 用户名将公开可见。请勿填写姓名、电话、学校班级、精确行踪等个人信息。无需公开提交时，可只下载记录。</p>
-        <p class="small">新增反馈不自动成为图鉴结论；核对后再更新网页。可在 GitHub 的同一条反馈中继续补充信息。</p>
-        <a href="https://github.com/acwangyan-cloud/shishui/issues" target="_blank" rel="noopener noreferrer">查看已有公开反馈 ↗</a>
+        <p class="privacy-note">无需注册或登录。提交后将立即公开显示，请勿填写个人信息。</p>
+        <p class="small">留言是大家的观察与建议，不自动成为图鉴结论。</p>
       </div>
       <form id="feedback-form" class="feedback-form">
         <div class="form-row">
@@ -575,23 +575,19 @@
         <label for="feedback-detail">观察或纠错内容 <span class="required">（必填）</span></label>
         <textarea id="feedback-detail" name="detail" rows="5" required aria-describedby="detail-help" placeholder="观察：看到哪些叶形、花形或生境特征？哪些地方还不确定？&#10;纠错：哪一处内容需要核对？建议如何修改？"></textarea>
         <small id="detail-help">10—600字。请区分亲眼观察、参考资料和自己的推测。</small>
-        <label for="feedback-source">参考资料链接（选填）</label>
-        <input id="feedback-source" name="source" type="url" placeholder="https://…" aria-describedby="source-help">
-        <small id="source-help">仅填写公开的 http 或 https 链接，最多300字；不要填写私人文件或带访问密钥的链接。</small>
-        <div class="form-actions"><button id="preview-submit" type="submit" disabled data-js-enable>生成预览</button><span class="small">预览不等于已提交</span></div>
+        <div class="form-actions"><button id="feedback-submit" type="submit" disabled>提交留言</button></div>
         <p id="feedback-status" role="status" aria-live="polite"></p>
-        <noscript><p>请启用 JavaScript 生成预览，或直接到 <a href="https://github.com/acwangyan-cloud/shishui/issues/new" target="_blank" rel="noopener noreferrer">GitHub 填写公开反馈</a>。</p></noscript>
+        <noscript><p>请启用 JavaScript 提交和查看留言。植物图鉴与照片仍可正常浏览。</p></noscript>
       </form>
-      <div id="feedback-preview" class="feedback-preview" hidden>
-        <h3>反馈预览</h3>
-        <p class="small">以下内容尚未提交。请检查是否包含个人信息；照片可在 GitHub 编辑反馈时自行附上，注意隐私与图片使用权。</p>
-        <pre id="feedback-preview-text"></pre>
-        <div class="preview-actions">
-          <a id="feedback-github-link" class="button-link" target="_blank" rel="noopener noreferrer">前往 GitHub 确认提交 ↗</a>
-          <button id="feedback-download" class="secondary" type="button">下载记录（TXT）</button>
-          <button id="feedback-edit" class="text-button" type="button">返回修改</button>
+      <section class="public-feedback" aria-labelledby="feedback-list-title">
+        <div class="feedback-list-heading"><h3 id="feedback-list-title">大家的留言</h3><p class="small">按提交时间倒序排列 · 时间均为北京时间</p></div>
+        <div id="feedback-list" class="feedback-list" aria-busy="true"></div>
+        <p id="feedback-list-status" class="small" role="status" aria-live="polite">正在加载留言…</p>
+        <div class="feedback-list-actions">
+          <button id="feedback-retry" class="secondary" type="button" hidden>重试加载</button>
+          <button id="feedback-more" class="secondary" type="button" hidden>加载更多留言</button>
         </div>
-      </div>
+      </section>
     </section>
   </main>
 
@@ -607,3 +603,4 @@
   </footer>
 </body>
 </html>
+
