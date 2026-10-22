@@ -2,16 +2,48 @@
 <html lang="zh">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="2025年美境行动：北京六处城市公园湿地植物调查与科普展示，记录植物形态与生境，分享观察成果。">
   <title>北京市城市公园湿地植物介绍</title>
   <style>
     body {
       font-family: sans-serif;
       margin: 2em;
       background: #f2f8f2;
+      color: #24332a;
+      line-height: 1.7;
     }
     h1 {
       text-align: center;
       color: darkgreen;
+    }
+    .project-intro, .page-notes {
+      max-width: 960px;
+      margin: 1.5em auto 2em;
+    }
+    .project-intro p, .page-notes p {
+      margin: 0.65em 0;
+    }
+    .project-year {
+      text-align: center;
+      color: #285c3a;
+      font-weight: bold;
+    }
+    .page-notes {
+      padding-top: 1em;
+      border-top: 1px solid #bdd0bd;
+      font-size: 0.9em;
+    }
+    a {
+      color: #25633d;
+      text-underline-offset: 0.2em;
+    }
+    a:focus-visible {
+      outline: 3px solid #25633d;
+      outline-offset: 3px;
+    }
+    .source {
+      font-size: 0.85em;
     }
     .grid {
       display: grid;
@@ -48,21 +80,45 @@
       }
     }
     @media (max-width: 600px) {
+      body {
+        margin: 1em;
+      }
+      h1 {
+        font-size: 1.65em;
+      }
       .grid {
         grid-template-columns: 1fr;
+      }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .card {
+        transition: none;
+      }
+      .card:hover {
+        transform: none;
       }
     }
   </style>
 </head>
 <body>
-  <h1>北京市城市公园湿地植物介绍</h1>
+  <header id="top">
+    <h1>北京市城市公园湿地植物介绍</h1>
+    <div class="project-intro">
+      <p class="project-year">2025年美境行动 · 城市公园湿地调查</p>
+      <p>2025年，我们走访北京六处城市公园，通过现场观察、摄影与记录，了解湿地植物的形态、分布和生境，并将调查材料整理为网页、科普折页与校园摄影展，分享身边的湿地知识。</p>
+      <p><strong>调查地点：</strong>北海公园、北京动物园、紫竹院公园、玉渊潭公园、陶然亭公园、西海湿地公园。</p>
+      <p><strong>阅读说明：</strong>本页展示2025年项目整理的植物照片与科普介绍，不代表六处公园完整的物种名录。植物的一般生态功能不等于本次调查已测得的水质改善效果。</p>
+    </div>
+  </header>
 
+  <main aria-label="湿地植物图文介绍">
   <div class="grid">
    <!-- 荇菜-->
     <div class="card">
       <img src="xingcai.jpg" alt="荇菜">
       <h2>荇菜</h2>
-      <p>沉水浮叶植物，株高20–80厘米，叶细长，质软。广泛分布于淡水环境。花期7–9月，小花隐蔽。为水生动物提供栖息地和食物。</p>
+      <p>多年生浮叶水生草本。圆形或卵圆形的叶片漂浮水面，叶片基部呈心形；花冠金黄色。常见于池塘及水流较缓的河段。</p>
+      <p class="source"><a href="https://www.iplant.cn/bk/096E2C24923731E6">资料：植物智·荇菜</a></p>
     </div>
 
     <!-- 千屈菜 -->
@@ -145,7 +201,8 @@
     <div class="card">
       <img src="heizao.jpg" alt="黑藻">
       <h2>黑藻</h2>
-      <p>大型绿藻，形态类似高等植物，体长可达数十厘米。多生于清洁水体中。具钙质包裹，有助水体硬度调节，提供栖息环境。</p>
+      <p>水鳖科多年生沉水草本，并非藻类。茎细长，叶通常3—8枚轮生，叶缘带有锯齿，生长在淡水环境中。</p>
+      <p class="source"><a href="https://www.iplant.cn/fsz/info/Hydrilla%20verticillata">资料：《深圳植物志》·黑藻</a></p>
     </div>
 
     
@@ -154,7 +211,8 @@
     <div class="card">
       <img src="shuicong.jpg" alt="水葱">
       <h2>水葱</h2>
-      <p>多年生挺水草本，茎圆柱形，根茎膨大为荸荠，可食用。</p>
+      <p>莎草科多年生草本，常生于水湿处。圆柱形的秆直立生长，地下根状茎横向伸展，花序看起来从秆顶附近的侧面长出。</p>
+      <p class="source"><a href="https://www.iplant.cn/fsz/info/Schoenoplectus%20tabernaemontan">资料：《深圳植物志》·水葱</a></p>
     </div>
 
       <!-- 菰 -->
@@ -170,12 +228,6 @@
       <p>多年生挺水草本，株高1–2米，叶片卵状披针形，灰绿色。适生浅水区，花期夏季，花序复总状，花小紫蓝色。根系发达，常用于湿地净化与景观营造，兼具优良水土保持能力。</p>
     </div>
     
-  <!-- 假稻 -->
-    <div class="card">
-      <img src="jiadao.jpg" alt="假稻">
-      <h2>假稻</h2>
-      <p>多年生湿生或沼生草本，具匍匐茎，节上生根；株高30-60厘米。叶片披针形，粗糙，边缘具小刺毛。圆锥花序顶生，花期夏秋季。具有较强的蔓延和固土能力，常用于水体边坡的水土保持与生态修复。</p>
-      </div>
     
        <!-- 荆三棱 -->
     <div class="card">
@@ -189,7 +241,8 @@
     <div class="card">
       <img src="hualin.jpg" alt="花蔺">
       <h2>花蔺</h2>
-      <p>多年生挺水草本，株高1–2米，叶细长。喜湿润环境，水深10–50厘米。花期6–9月，花序呈圆锥状。具较强水质净化和固土功能。</p>
+      <p>多年生水生草本，基生叶细长。花在花葶顶端呈伞形排列，内轮花被片粉红色。常生于浅水或沼泽环境。</p>
+      <p class="source"><a href="https://www.iplant.cn/frps/pdf/8/147y.pdf">资料：《中国植物志》·花蔺（PDF）</a></p>
     </div>
     
     
@@ -212,7 +265,8 @@
     <div class="card">
       <img src="jinyuzao.jpg" alt="金鱼藻">
       <h2>金鱼藻</h2>
-      <p>多年生沉水草本，株高30–100厘米，叶羽状细腻，绿色至红色。开花期夏季，小花浮出水面。常用于水族箱和生态恢复。</p>
+      <p>多年生沉水草本，没有真正的根。叶围绕茎轮生，叶片呈二叉状分裂，裂片细长；花微小、单性。</p>
+      <p class="source"><a href="https://www.iplant.cn/frps/pdf/27/015z.pdf">资料：《中国植物志》·金鱼藻属（PDF）</a></p>
     </div>
     
      <!-- 狐尾藻-->
@@ -241,13 +295,20 @@
     <div class="card">
       <img src="kucao.jpg" alt="苦草">
       <h2>苦草</h2>
-      <p>多年生沉水草本，叶带状长达1米，株高0.5–1米。花期6–8月，花小，生于水体底部。吸收水中营养盐，帮助净化水质。</p>
+      <p>沉水草本，叶片呈带状。开花时，雌花由长花序梗送至水面，雄花脱离植株后上浮；受精后，雌花的花序梗螺旋卷曲。</p>
+      <p class="source"><a href="https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:30023196-2/general-information">资料：英国皇家植物园·苦草属</a></p>
     </div>
 
  
     
   
-    </div>
   </div>
+  </main>
+  <footer class="page-notes">
+    <p><strong>资料与观察：</strong>本页保留2025年项目原有照片。本次文字校订的参考资料见对应条目；文字校订不等于完成照片的专家鉴定。具体拍摄地点、日期及存疑的植物名称，仍需结合原始记录核对。</p>
+    <p><strong>文明观察：</strong>请在开放区域观察和拍照，不采摘、不投放植物，不涉水取样，也不要依据网页介绍自行食用或药用野生植物。</p>
+    <p><a href="#top">返回顶部</a></p>
+  </footer>
 </body>
 </html>
+
