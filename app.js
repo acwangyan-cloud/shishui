@@ -139,6 +139,16 @@
       update();
       search.focus();
     });
+    document.querySelectorAll('a[href^="#plant-"]').forEach(function (link) {
+      var targetId = link.getAttribute("href").slice(1);
+      if (!plants.some(function (plant) { return plant.card.id === targetId; })) return;
+      link.addEventListener("click", function (event) {
+        if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+        search.value = "";
+        habit.value = "all";
+        update(); // Reveal the target before the anchor's normal fragment navigation.
+      });
+    });
     update();
   }
 
