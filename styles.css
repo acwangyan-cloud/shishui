@@ -64,7 +64,7 @@ dl { margin:0.8rem 0 1rem; }
 dt { font-weight:700; font-size:0.875rem; color:#285c3a; margin-top:0.7rem; }
 dd { margin:0.15rem 0 0; }
 .card-actions { margin-top:auto; padding-top:0.55rem; border-top:1px solid #e3ebe3; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:0.25rem 0.75rem; }
-.source,.feedback-for { display:inline-flex; align-items:center; min-height:44px; max-width:100%; font-size:0.875rem; line-height:1.5; overflow-wrap:anywhere; }
+.feedback-for { display:inline-flex; align-items:center; min-height:44px; max-width:100%; font-size:0.875rem; line-height:1.5; overflow-wrap:anywhere; }
 .feedback-for { font-weight:600; }
 
 .participate { margin-top:3rem; border-top:2px solid var(--line); padding-top:2rem; display:grid; grid-template-columns:0.8fr 1.2fr; gap:2rem; }
@@ -97,7 +97,7 @@ dialog::backdrop { background:rgb(16 32 20 / 0.82); }
 .section-heading { max-width:900px; margin-bottom:1.35rem; }
 .section-heading h2 { color:var(--green); font-family:var(--display-font); font-size:1.9rem; margin:0 0 0.65rem; }
 .section-heading p { margin:0; color:var(--muted); }
-.survey-layout { display:grid; grid-template-columns:minmax(0,1.15fr) minmax(0,0.85fr); align-items:start; gap:clamp(2rem,4vw,3.5rem); }
+.survey-layout { display:block; max-width:1050px; }
 .survey-copy,.outputs-copy { min-width:0; }
 .survey-copy > p:first-child,.outputs-copy > p:first-child { margin-top:0; }
 .method-steps { margin:1.1rem 0 0; padding-left:1.6rem; }
@@ -109,13 +109,10 @@ dialog::backdrop { background:rgb(16 32 20 / 0.82); }
 .evidence-figure .photo-open img { border-radius:5px; }
 .evidence-figure figcaption { margin-top:0.7rem; color:var(--muted); font-size:0.875rem; line-height:1.65; overflow-wrap:anywhere; }
 .evidence-figure figcaption p { margin:0.3rem 0; }
-#field-record { width:100%; max-width:462px; justify-self:center; padding:0.85rem; border:1px solid var(--line); border-radius:8px; background:var(--paper); box-shadow:0 3px 8px rgb(36 51 42 / 0.05); }
-#field-record .photo-open img { background:var(--paper); }
 .finding-list { border-bottom:1px solid var(--line); }
 .finding { padding:1rem 0 1.15rem; border-top:1px solid var(--line); }
 .finding h3 { color:var(--green); font-size:1.1rem; margin:0 0 0.5rem; }
 .finding p { max-width:1050px; margin:0.5rem 0; }
-.evidence-ref { font-size:0.875rem; overflow-wrap:anywhere; }
 .text-photo-link { display:inline; border-radius:0; }
 .comparison-group { margin:1rem 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
 .comparison-group + .comparison-group { border-top:0; margin-top:-1rem; }
@@ -139,7 +136,6 @@ dialog::backdrop { background:rgb(16 32 20 / 0.82); }
 .outputs-gallery img[width="583"] { max-width:583px; }
 .outputs-gallery img[width="617"] { max-width:617px; }
 .record-meta { margin:0.35rem 0 0; color:var(--muted); font-size:0.875rem; line-height:1.6; overflow-wrap:anywhere; }
-.source-note { color:var(--muted); font-size:0.875rem; line-height:1.7; overflow-wrap:anywhere; }
 .report-summary { margin:1rem 0; padding:0.65rem 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line); font-size:0.9rem; }
 .report-summary > summary { color:var(--green); font-weight:600; cursor:pointer; }
 .report-summary p { margin:0.65rem 0 0; }
