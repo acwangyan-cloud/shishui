@@ -1,313 +1,540 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="2025年美境行动：北京六处城市公园湿地植物调查与科普展示，记录植物形态与生境，分享观察成果。">
+  <meta name="description" content="2025年美境行动：北京六处城市公园湿地植物调查与科普展示。查找植物、放大照片、记录观察与反馈。">
   <title>北京市城市公园湿地植物介绍</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      margin: 2em;
-      background: #f2f8f2;
-      color: #24332a;
-      line-height: 1.7;
-    }
-    h1 {
-      text-align: center;
-      color: darkgreen;
-    }
-    .project-intro, .page-notes {
-      max-width: 960px;
-      margin: 1.5em auto 2em;
-    }
-    .project-intro p, .page-notes p {
-      margin: 0.65em 0;
-    }
-    .project-year {
-      text-align: center;
-      color: #285c3a;
-      font-weight: bold;
-    }
-    .page-notes {
-      padding-top: 1em;
-      border-top: 1px solid #bdd0bd;
-      font-size: 0.9em;
-    }
-    a {
-      color: #25633d;
-      text-underline-offset: 0.2em;
-    }
-    a:focus-visible {
-      outline: 3px solid #25633d;
-      outline-offset: 3px;
-    }
-    .source {
-      font-size: 0.85em;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr); /* 固定三列 */
-      gap: 2em; /* 卡片间距 */
-    }
-    .card {
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-      padding: 1em;
-      text-align: center;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-    .card:hover {
-      transform: scale(1.02);
-      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
-    }
-    .card img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 10px;
-      object-fit: cover;
-    }
-    .card h2 {
-      margin: 0.8em 0;
-      color: seagreen;
-    }
-
-    /* 小屏幕自适应：手机上改为1列，平板2列 */
-    @media (max-width: 900px) {
-      .grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-    @media (max-width: 600px) {
-      body {
-        margin: 1em;
-      }
-      h1 {
-        font-size: 1.65em;
-      }
-      .grid {
-        grid-template-columns: 1fr;
-      }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      .card {
-        transition: none;
-      }
-      .card:hover {
-        transform: none;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
 </head>
 <body>
-  <header id="top">
+  <a class="skip-link" href="#plants">跳到植物图鉴</a>
+  <header id="top" class="page-header">
     <h1>北京市城市公园湿地植物介绍</h1>
     <div class="project-intro">
       <p class="project-year">2025年美境行动 · 城市公园湿地调查</p>
       <p>2025年，我们走访北京六处城市公园，通过现场观察、摄影与记录，了解湿地植物的形态、分布和生境，并将调查材料整理为网页、科普折页与校园摄影展，分享身边的湿地知识。</p>
       <p><strong>调查地点：</strong>北海公园、北京动物园、紫竹院公园、玉渊潭公园、陶然亭公园、西海湿地公园。</p>
     </div>
+    <nav class="page-nav" aria-label="页内导航"><a href="#plants">查找植物</a><a href="#participate">参与观察与纠错</a></nav>
   </header>
 
-  <main aria-label="湿地植物图文介绍">
-  <div class="grid">
-   <!-- 荇菜-->
-    <div class="card">
-      <img src="xingcai.jpg" alt="荇菜">
-      <h2>荇菜</h2>
-      <p>多年生浮叶水生草本。圆形或卵圆形的叶片漂浮水面，叶片基部呈心形；花冠金黄色。常见于池塘及水流较缓的河段。</p>
-      <p class="source"><a href="https://www.iplant.cn/bk/096E2C24923731E6">资料：植物智·荇菜</a></p>
-    </div>
-
-    <!-- 千屈菜 -->
-    <div class="card">
-      <img src="qianqucai.jpg" alt="千屈菜">
-      <h2>千屈菜</h2>
-      <p>多年生挺水草本，生于湿地及浅水区，花紫红色，花期6–9月。</p>
-    </div>
-
-    <!-- 睡莲 -->
-    <div class="card">
-      <img src="lian1.jpg" alt="睡莲">
-      <h2>睡莲</h2>
-      <p>多年生水生草本，具浮水叶与沉水叶；开花期夏季，常用于湖泊生态修复与景观营造。</p>
-    </div>
-
-    <!-- 荷 -->
-    <div class="card">
-      <img src="he1.jpg" alt="荷">
-      <h2>荷</h2>
-      <p>多年生挺水草本；地下茎肥厚（藕），花单生，大型，观赏和食用价值高。</p>
-    </div>
-
-    <!-- 芦苇 -->
-    <div class="card">
-      <img src="luwei.jpg" alt="芦苇">
-      <h2>芦苇</h2>
-      <p>多年生禾本科草本，株高2–4米，耐盐碱、耐涝，根系发达，固沙防风。</p>
-    </div>
-
-    <!-- 假稻 -->
-    <div class="card">
-      <img src="jiadao.jpg" alt="假稻">
-      <h2>假稻</h2>
-      <p>多年生湿生草本，具匍匐茎，常用于水土保持与生态修复。</p>
-    </div>
-
-    <!-- 菖蒲 -->
-    <div class="card">
-      <img src="changpu.jpg" alt="菖蒲">
-      <h2>菖蒲</h2>
-      <p>多年生挺水草本，叶剑形，根茎芳香，可入药，适应性强。</p>
-    </div>
-
-    <!-- 黄菖蒲 -->
-    <div class="card">
-      <img src="huangchangpu.jpg" alt="黄菖蒲">
-      <h2>黄菖蒲</h2>
-      <p>多年生挺水草本，花黄色艳丽，具观赏性和水质净化作用。</p>
-    </div>
-
-    <!-- 香蒲 -->
-    <div class="card">
-      <img src="xiangpu.jpg" alt="香蒲">
-      <h2>香蒲</h2>
-      <p>多年生挺水草本，株高1.5–2.5米，具良好水质净化功能。</p>
-    </div>
-
-    <!-- 慈菇 -->
-    <div class="card">
-      <img src="cigu.jpg" alt="慈菇">
-      <h2>慈菇</h2>
-      <p>多年生挺水草本，叶箭头形，块茎可食，具经济和生态价值。</p>
-    </div>
-
-    <!-- 泽泻 -->
-    <div class="card">
-      <img src="zexie.jpg" alt="泽泻">
-      <h2>泽泻</h2>
-      <p>多年生挺水草本，叶基生，花小白色，块茎可入药。</p>
-    </div>
-
-    <!-- 黑三棱 -->
-    <div class="card">
-      <img src="heisanleng.jpg" alt="黑三棱">
-      <h2>黑三棱</h2>
-      <p>多年生挺水草本，花序球形，常用于湿地生态修复。</p>
-    </div>
-      <!-- 黑藻 -->
-    <div class="card">
-      <img src="heizao.jpg" alt="黑藻">
-      <h2>黑藻</h2>
-      <p>水鳖科多年生沉水草本，并非藻类。茎细长，叶通常3—8枚轮生，叶缘带有锯齿，生长在淡水环境中。</p>
-      <p class="source"><a href="https://www.iplant.cn/fsz/info/Hydrilla%20verticillata">资料：《深圳植物志》·黑藻</a></p>
-    </div>
-
-    
-
-    <!-- 水葱 -->
-    <div class="card">
-      <img src="shuicong.jpg" alt="水葱">
-      <h2>水葱</h2>
-      <p>莎草科多年生草本，常生于水湿处。圆柱形的秆直立生长，地下根状茎横向伸展，花序看起来从秆顶附近的侧面长出。</p>
-      <p class="source"><a href="https://www.iplant.cn/fsz/info/Schoenoplectus%20tabernaemontan">资料：《深圳植物志》·水葱</a></p>
-    </div>
-
-      <!-- 菰 -->
-    <div class="card">
-      <img src="gu.jpg" alt="菰">
-      <h2>菰</h2>
-      <p>多年生挺水草本，高1–3米；茎基部膨大（被黑粉菌寄生后形成“茭白”）。叶片长披针形，扁平。圆锥花序大型，花期夏秋季。其颖果可食用，膨大茎部为常见蔬菜，兼具水质净化与栖息地营造功能。</p>
+  <main>
+    <section id="plants" class="catalogue" aria-label="湿地植物图鉴">
+      <div class="filter-bar">
+        <div class="search-field"><label for="plant-search">查找植物</label><input id="plant-search" type="search" placeholder="输入名称、学名或特征，例如：圆形 黄色" autocomplete="off" disabled data-js-enable></div>
+        <div class="category-field"><label for="habit-filter">生活型</label><select id="habit-filter" disabled data-js-enable><option value="all">全部生活型</option><option value="emergent">挺水与湿生</option><option value="floating">浮叶</option><option value="submerged">沉水</option></select></div>
+        <button id="clear-filters" class="secondary" type="button" disabled data-js-enable>清除筛选</button>
+        <p id="result-count" class="result-count" role="status" aria-live="polite">共25张植物卡片</p>
       </div>
-     <!-- 再力花-->
-    <div class="card">
-      <img src="zailihua.jpg" alt="再力花">
-      <h2>再力花</h2>
-      <p>多年生挺水草本，株高1–2米，叶片卵状披针形，灰绿色。适生浅水区，花期夏季，花序复总状，花小紫蓝色。根系发达，常用于湿地净化与景观营造，兼具优良水土保持能力。</p>
-    </div>
-    
-    
-       <!-- 荆三棱 -->
-    <div class="card">
-      <img src="jingsanleng.jpg" alt="荆三棱">
-      <h2>荆三棱</h2>
-      <p>多年生挺水草本，株高0.5–1.5米，对湿地生物多样性有贡献。</p>
-    </div>    
-   
-    
-      <!-- 花蔺 -->
-    <div class="card">
-      <img src="hualin.jpg" alt="花蔺">
-      <h2>花蔺</h2>
-      <p>多年生水生草本，基生叶细长。花在花葶顶端呈伞形排列，内轮花被片粉红色。常生于浅水或沼泽环境。</p>
-      <p class="source"><a href="https://www.iplant.cn/frps/pdf/8/147y.pdf">资料：《中国植物志》·花蔺（PDF）</a></p>
-    </div>
-    
-    
-     <!-- 浮叶眼子菜 -->
-    <div class="card">
-      <img src="fuyeyanzicai.jpg" alt="浮叶眼子菜">
-      <h2>浮叶眼子菜</h2>
-      <p>多年生水生草本，具浮水叶与沉水叶；浮水叶卵形至椭圆形，革质全缘，亮绿色；沉水叶常呈丝状。开花期夏季，穗状花序挺出水面。具有较强的水质净化能力，常用于湖泊生态修复与景观营造。</p>
+      <noscript><p class="notice">当前浏览器未启用 JavaScript。仍可阅读全部卡片、点击照片查看原图；搜索、放大弹窗和反馈预览需要启用 JavaScript。</p></noscript>
+      <p id="no-results" class="empty-state" hidden>没有找到匹配的植物。试试更短的关键词，或点击“清除筛选”查看全部卡片。</p>
+      <div class="grid">
+    <article class="card" id="plant-xingcai" data-plant-card data-name="荇菜" data-habit="floating" data-search="荇菜 Nymphoides peltata 浮叶 叶片近圆，基部有心形缺口；金黄色花冠五裂，裂片边缘呈流苏状。 池塘、湖泊等较平静水体。 ">
+      <a class="photo-open" href="xingcai.jpg" data-name="荇菜" aria-label="放大荇菜照片" aria-haspopup="dialog">
+        <img src="xingcai.jpg" alt="荇菜，2025年项目原有照片" loading="lazy" decoding="async">
+        <span class="photo-hint">点击查看大图</span>
+      </a>
+      <div class="card-body">
+        <div class="card-heading"><h2>荇菜</h2><span class="habit">浮叶</span></div>
+        <p class="scientific">参考学名：<i lang="la">Nymphoides peltata</i></p>
+        
+        <dl>
+          <dt>辨认要点</dt><dd>叶片近圆，基部有心形缺口；金黄色花冠五裂，裂片边缘呈流苏状。</dd>
+          <dt>常见生境</dt><dd>池塘、湖泊等较平静水体。</dd>
+          <dt>观察提示</dt><dd>放大花朵，能找到花冠裂片边缘的细碎流苏吗？</dd>
+        </dl>
+        <div class="card-actions"><a class="source" href="https://www.iplant.cn/foc/pdf/Nymphoides.pdf" target="_blank" rel="noopener noreferrer">Flora of China·荇菜属 ↗</a><a class="feedback-for" href="#participate" data-name="荇菜">记录或纠错</a></div>
       </div>
+    </article>
 
-     
-     <!-- 篦齿眼子菜 -->
-    <div class="card">
-      <img src="bichiyanzicai.jpg" alt="篦齿眼子菜">
-      <h2>篦齿眼子菜</h2>
-      <p>沉水植物，有助于维持水体透明度和水生态平衡。</p>
-    </div>
-    
-      <!-- 金鱼藻 -->
-    <div class="card">
-      <img src="jinyuzao.jpg" alt="金鱼藻">
-      <h2>金鱼藻</h2>
-      <p>多年生沉水草本，没有真正的根。叶围绕茎轮生，叶片呈二叉状分裂，裂片细长；花微小、单性。</p>
-      <p class="source"><a href="https://www.iplant.cn/frps/pdf/27/015z.pdf">资料：《中国植物志》·金鱼藻属（PDF）</a></p>
-    </div>
-    
-     <!-- 狐尾藻-->
-    <div class="card">
-      <img src="huweizao.jpg" alt="狐尾藻">
-      <h2>狐尾藻</h2>
-      <p>多年生沉水草本，株高1–2米，羽状叶片，密集排列。花期夏季，小花微小。生长快，常形成浓密水下植被，改善水质。</p>
-    </div>
-    
-       <!-- 光叶眼子菜 -->
-    <div class="card">
-      <img src="guangyeyanzicai.jpg" alt="光叶眼子菜">
-      <h2>光叶眼子菜</h2>
-      <p>多年生沉水草本，株长40–200厘米，叶互生，长椭圆形至披针形，薄而半透明，绿色。开花期夏季，穗状花序挺出水面。常用于水体净化与生态修复。</p>
-    </div>
-     
-    
-     <!-- 菹草-->
-    <div class="card">
-      <img src="zucao.jpg" alt="菹草">
-      <h2>菹草</h2>
-      <p>多年生沉水草本，株高30–100厘米，叶波浪形，边缘有锯齿。花期5–7月，花序细长。生长于水质较清的湖泊和河流中，氧气释放量大，促进水体自净。</p>
-    </div>
+    <article class="card" id="plant-qianqucai" data-plant-card data-name="千屈菜" data-habit="emergent" data-search="千屈菜 Lythrum salicaria 湿生 披针形叶对生或三叶轮生；紫红色小花密集，使花枝呈长穗状。 河岸、湖畔及潮湿草地。 ">
+      <a class="photo-open" href="qianqucai.jpg" data-name="千屈菜" aria-label="放大千屈菜照片" aria-haspopup="dialog">
+        <img src="qianqucai.jpg" alt="千屈菜，2025年项目原有照片" loading="lazy" decoding="async">
+        <span class="photo-hint">点击查看大图</span>
+      </a>
+      <div class="card-body">
+        <div class="card-heading"><h2>千屈菜</h2><span class="habit">湿生</span></div>
+        <p class="scientific">参考学名：<i lang="la">Lythrum salicaria</i></p>
+        
+        <dl>
+          <dt>辨认要点</dt><dd>披针形叶对生或三叶轮生；紫红色小花密集，使花枝呈长穗状。</dd>
+          <dt>常见生境</dt><dd>河岸、湖畔及潮湿草地。</dd>
+          <dt>观察提示</dt><dd>同一段茎上，每个节长着两片还是三片叶？</dd>
+        </dl>
+        <div class="card-actions"><a class="source" href="https://www.iplant.cn/fsz/info/Lythrum%20salicaria" target="_blank" rel="noopener noreferrer">《深圳植物志》·千屈菜 ↗</a><a class="feedback-for" href="#participate" data-name="千屈菜">记录或纠错</a></div>
+      </div>
+    </article>
 
-      <!-- 苦草-->
-    <div class="card">
-      <img src="kucao.jpg" alt="苦草">
-      <h2>苦草</h2>
-      <p>沉水草本，叶片呈带状。开花时，雌花由长花序梗送至水面，雄花脱离植株后上浮；受精后，雌花的花序梗螺旋卷曲。</p>
-      <p class="source"><a href="https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:30023196-2/general-information">资料：英国皇家植物园·苦草属</a></p>
-    </div>
+    <article class="card" id="plant-shuilian" data-plant-card data-name="睡莲" data-habit="floating" data-search="睡莲 Nymphaea sp. 浮叶 浮水叶近圆或卵形，基部常有明显缺口；花大，花瓣排成多轮。 池塘、湖泊等静水环境。 属级参考，种及园艺品种待核">
+      <a class="photo-open" href="lian1.jpg" data-name="睡莲" aria-label="放大睡莲照片" aria-haspopup="dialog">
+        <img src="lian1.jpg" alt="睡莲，2025年项目原有照片" loading="lazy" decoding="async">
+        <span class="photo-hint">点击查看大图</span>
+      </a>
+      <div class="card-body">
+        <div class="card-heading"><h2>睡莲</h2><span class="habit">浮叶</span></div>
+        <p class="scientific">参考学名：<i lang="la">Nymphaea sp.</i></p>
+        <p class="name-note">属级参考，种及园艺品种待核</p>
+        <dl>
+          <dt>辨认要点</dt><dd>浮水叶近圆或卵形，基部常有明显缺口；花大，花瓣排成多轮。</dd>
+          <dt>常见生境</dt><dd>池塘、湖泊等静水环境。</dd>
+          <dt>观察提示</dt><dd>叶片基部的缺口，是张开还是两侧重叠？</dd>
+        </dl>
+        <div class="card-actions"><a class="source" href="https://www.iplant.cn/z/frps/10131" target="_blank" rel="noopener noreferrer">《中国植物志》·睡莲属 ↗</a><a class="feedback-for" href="#participate" data-name="睡莲">记录或纠错</a></div>
+      </div>
+    </article>
 
- 
-    
-  
-  </div>
+    <article class="card" id="plant-he" data-plant-card data-name="荷" data-habit="emergent" data-search="荷 Nelumbo nucifera 挺水 圆形叶片呈盾状，叶柄接近叶心；花后形成顶面有孔的莲蓬。 池塘等静水浅水处。 别名：莲、荷花">
+      <a class="photo-open" href="he1.jpg" data-name="荷" aria-label="放大荷照片" aria-haspopup="dialog">
+        <img src="he1.jpg" alt="荷，2025年项目原有照片" loading="lazy" decoding="async">
+        <span class="photo-hint">点击查看大图</span>
+      </a>
+      <div class="card-body">
+        <div class="card-heading"><h2>荷</h2><span class="habit">挺水</span></div>
+        <p class="scientific">参考学名：<i lang="la">Nelumbo nucifera</i></p>
+        <p class="name-note">别名：莲、荷花</p>
+        <dl>
+          <dt>辨认要点</dt><dd>圆形叶片呈盾状，叶柄接近叶心；花后形成顶面有孔的莲蓬。</dd>
+          <dt>常见生境</dt><dd>池塘等静水浅水处。</dd>
+          <dt>观察提示</dt><dd>不翻动叶片，能从侧面看清叶柄连接在叶片哪里吗？</dd>
+        </dl>
+        <div class="card-actions"><a class="source" href="https://www.iplant.cn/bk/84EE4C927EA209CA" target="_blank" rel="noopener noreferrer">植物智·莲 ↗</a><a class="feedback-for" href="#participate" data-name="荷">记录或纠错</a></div>
+      </div>
+    </article>
+
+    <article class="card" id="plant-luwei" data-plant-card data-name="芦苇" data-habit="emergent" data-search="芦苇 Phragmites australis 挺水／湿生 茎直立且节明显，长叶沿茎排列；顶部大型花序分枝多，带丝状柔毛。 河湖岸边、浅水及沼泽湿地。 ">
+      <a class="photo-open" href="luwei.jpg" data-name="芦苇" aria-label="放大芦苇照片" aria-haspopup="dialog">
+        <img src="luwei.jpg" alt="芦苇，2025年项目原有照片" loading="lazy" decoding="async">
+        <span class="photo-hint">点击查看大图</span>
+      </a>
+      <div class="card-body">
+        <div class="card-heading"><h2>芦苇</h2><span class="habit">挺水／湿生</span></div>
+        <p class="scientific">参考学名：<i lang="la">Phragmites australis</i></p>
+        
+        <dl>
+          <dt>辨认要点</dt><dd>茎直立且节明显，长叶沿茎排列；顶部大型花序分枝多，带丝状柔毛。</dd>
+          <dt>常见生境</dt><dd>河湖岸边、浅水及沼泽湿地。</dd>
+          <dt>观察提示</dt><dd>长叶是沿茎逐节生长，还是只从基部生出？</dd>
+        </dl>
+        <div class="card-actions"><a class="source" href="https://www.iplant.cn/fsz/info/Phragmites%20australis" target="_blank" rel="noopener noreferrer">《深圳植物志》·芦苇 ↗</a><a class="feedback-for" href="#participate" data-name="芦苇">记录或纠错</a></div>
+      </div>
+    </article>
+
+    <article class="card" id="plant-jiadao" data-plant-card data-name="假稻" data-habit="emergent" data-search="假稻 Leersia japonica 湿生／挺水 下部茎常伏卧，叶片狭长；花序分枝较硬，小穗侧扁且没有长芒。 池边、沟岸及积水田地。 ">
+      <a class="photo-open" href="jiadao.jpg" data-name="假稻" aria-label="放大假稻照片" aria-haspopup="dialog">
+        <img src="jiadao.jpg" alt="假稻，2025年项目原有照片" loading="lazy" decoding="async">
+        <span class="photo-hint">点击查看大图</span>
+      </a>
+      <div class="card-body">
+        <div class="card-heading"><h2>假稻</h2><span class="habit">湿生／挺水</span></div>
+        <p class="scientific">参考学名：<i lang="la">Leersia japonica</i></p>
+        
+        <dl>
+          <dt>辨认要点</dt><dd>下部茎常伏卧，叶片狭长；花序分枝较硬，小穗侧扁且没有长芒。</dd>
+          <dt>常见生境</dt><dd>池边、沟岸及积水田地。</dd>
+          <dt>观察提示</dt><dd>放大花序照片，分枝下部也有小穗吗？小穗有长芒吗？</dd>
+        </dl>
+        <div class="card-actions"><a class="source" href="https://www.iplant.cn/foc/pdf/Leersia.pdf" target="_blank" rel="noopener noreferrer">Flora of China·假稻属 ↗</a><a class="feedback-for" href="#participate" data-name="假稻">记录或纠错</a></div>
+      </div>
+    </article>
+
+    <article class="card" id="plant-changpu" data-plant-card data-name="菖蒲" data-habit="emergent" data-search="菖蒲 Acorus calamus 挺水／湿生 剑形叶片的中脉明显隆起；黄绿色肉穗花序斜出，看似长在叶片侧面。 沼泽、池岸及静水浅水处。 ">
+      <a class="photo-open" href="changpu.jpg" data-name="菖蒲" aria-label="放大菖蒲照片" aria-haspopup="dialog">
+        <img src="changpu.jpg" alt="菖蒲，2025年项目原有照片" loading="lazy" decoding="async">
+        <span class="photo-hint">点击查看大图</span>
+      </a>
+      <div class="card-body">
+        <div class="card-heading"><h2>菖蒲</h2><span class="habit">挺水／湿生</span></div>
+        <p class="scientific">参考学名：<i lang="la">Acorus calamus</i></p>
+        
+        <dl>
+          <dt>辨认要点</dt><dd>剑形叶片的中脉明显隆起；黄绿色肉穗花序斜出，看似长在叶片侧面。</dd>
+          <dt>常见生境</dt><dd>沼泽、池岸及静水浅水处。</dd>
+          <dt>观察提示</dt><dd>叶丛中能否找到一根斜伸、密布小花的短花序？</dd>
+        </dl>
+        <div class="card-actions"><a class="source" href="https://www.iplant.cn/foc/pdf/Acoraceae.pdf" target="_blank" rel="noopener noreferrer">Flora of China·菖蒲科 ↗</a><a class="feedback-for" href="#participate" data-name="菖蒲">记录或纠错</a></div>
+      </div>
+    </article>
+
+    <article class="card" id="plant-huangchangpu" data-plant-card data-name="黄菖蒲" data-habit="emergent" data-search="黄菖蒲 Iris pseudacorus 挺水／湿生 灰绿色宽剑形叶有明显中脉；黄色大花的外侧花被片带黑褐色花纹。 河湖沿岸湿地及沼泽地。 ">
+      <a class="photo-open" href="huangchangpu.jpg" data-name="黄菖蒲" aria-label="放大黄菖蒲照片" aria-haspopup="dialog">
+        <img src="huangchangpu.jpg" alt="黄菖蒲，2025年项目原有照片" loading="lazy" decoding="async">
+        <span class="photo-hint">点击查看大图</span>
+      </a>
+      <div class="card-body">
+        <div class="card-heading"><h2>黄菖蒲</h2><span class="habit">挺水／湿生</span></div>
+        <p class="scientific">参考学名：<i lang="la">Iris pseudacorus</i></p>
+        
+        <dl>
+          <dt>辨认要点</dt><dd>灰绿色宽剑形叶有明显中脉；黄色大花的外侧花被片带黑褐色花纹。</dd>
+          <dt>常见生境</dt><dd>河湖沿岸湿地及沼泽地。</dd>
+          <dt>观察提示</dt><dd>黄色花被片上的深色花纹，集中在哪一部分？</dd>
+        </dl>
+        <div class="card-actions"><a class="source" href="https://www.iplant.cn/bk/8ED650C9215071C3" target="_blank" rel="noopener noreferrer">植物智·黄菖蒲 ↗</a><a class="feedback-for" href="#participate" data-name="黄菖蒲">记录或纠错</a></div>
+      </div>
+    </article>
+
+    <article class="card" id="plant-xiangpu" data-plant-card data-name="香蒲" data-habit="emergent" data-search="香蒲 Typha sp. 挺水 叶片细长如带；花序直立呈圆柱状，雄花与雌花分别集中在上下两段。 池塘、沟渠及河流缓流带。 属级参考，照片种级待核">
+      <a class="photo-open" href="xiangpu.jpg" data-name="香蒲" aria-label="放大香蒲照片" aria-haspopup="dialog">
+        <img src="xiangpu.jpg" alt="香蒲，2025年项目原有照片" loading="lazy" decoding="async">
+        <span class="photo-hint">点击查看大图</span>
+      </a>
+      <div class="card-body">
+        <div class="card-heading"><h2>香蒲</h2><span class="habit">挺水</span></div>
+        <p class="scientific">参考学名：<i lang="la">Typha sp.</i></p>
+        <p class="name-note">属级参考，照片种级待核</p>
+        <dl>
+          <dt>辨认要点</dt><dd>叶片细长如带；花序直立呈圆柱状，雄花与雌花分别集中在上下两段。</dd>
+          <dt>常见生境</dt><dd>池塘、沟渠及河流缓流带。</dd>
+          <dt>观察提示</dt><dd>花期拍摄完整花序：上下两段之间是否有明显空隙？</dd>
+        </dl>
+        <div class="card-actions"><a class="source" href="https://www.iplant.cn/z/frps/17160" target="_blank" rel="noopener noreferrer">《中国植物志》·香蒲 ↗</a><a class="feedback-for" href="#participate" data-name="香蒲">记录或纠错</a></div>
+      </div>
+    </article>
+
+    <article class="card" id="plant-cigu" data-plant-card data-name="慈菇" data-habit="emergent" data-search="慈菇 Sagittaria sp. 挺水／湿生 挺水叶常呈箭形或戟形；白色花通常具三片花瓣，沿花序分层排列。 池塘、沟渠及水田浅水处。 沿用原标签；规范属名为慈姑属，种待核">
+      <a class="photo-open" href="cigu.jpg" data-name="慈菇" aria-label="放大慈菇照片" aria-haspopup="dialog">
+        <img src="cigu.jpg" alt="慈菇，2025年项目原有照片" loading="lazy" decoding="async">
+        <span class="photo-hint">点击查看大图</span>
+      </a>
+      <div class="card-body">
+        <div class="card-heading"><h2>慈菇</h2><span class="habit">挺水／湿生</span></div>
+        <p class="scientific">参考学名：<i lang="la">Sagittaria sp.</i></p>
+        <p class="name-note">沿用原标签；规范属名为慈姑属，种待核</p>
+        <dl>
+          <dt>辨认要点</dt><dd>挺水叶常呈箭形或戟形；白色花通常具三片花瓣，沿花序分层排列。</dd>
+          <dt>常见生境</dt><dd>池塘、沟渠及水田浅水处。</dd>
+          <dt>观察提示</dt><dd>拍下完整叶片：顶端裂片与两侧裂片，哪一部分更长？</dd>
+        </dl>
+        <div class="card-actions"><a class="source" href="https://www.iplant.cn/fsz/info/Sagittaria" target="_blank" rel="noopener noreferrer">《深圳植物志》·慈姑属 ↗</a><a class="feedback-for" href="#participate" data-name="慈菇">记录或纠错</a></div>
+      </div>
+    </article>
+
+    <article class="card" id="plant-zexie" data-plant-card data-name="泽泻" data-habit="emergent" data-search="泽泻 Alisma plantago-aquatica 挺水／湿生 叶从基部生出，具长柄和数条弧形纵脉；细花枝分层展开，花小而稀疏。 河湾、池塘浅水及低洼湿地。 ">
+      <a class="photo-open" href="zexie.jpg" data-name="泽泻" aria-label="放大泽泻照片" aria-haspopup="dialog">
+        <img src="zexie.jpg" alt="泽泻，2025年项目原有照片" loading="lazy" decoding="async">
+        <span class="photo-hint">点击查看大图</span>
+      </a>
+      <div class="card-body">
+        <div class="card-heading"><h2>泽泻</h2><span class="habit">挺水／湿生</span></div>
+        <p class="scientific">参考学名：<i lang="la">Alisma plantago-aquatica</i></p>
+        
+        <dl>
+          <dt>辨认要点</dt><dd>叶从基部生出，具长柄和数条弧形纵脉；细花枝分层展开，花小而稀疏。</dd>
+          <dt>常见生境</dt><dd>河湾、池塘浅水及低洼湿地。</dd>
+          <dt>观察提示</dt><dd>花序有几层分枝，每层是否向四周展开？</dd>
+        </dl>
+        <div class="card-actions"><a class="source" href="https://www.iplant.cn/fsz/info/Alisma%20plantago-aquatica" target="_blank" rel="noopener noreferrer">《深圳植物志》·泽泻 ↗</a><a class="feedback-for" href="#participate" data-name="泽泻">记录或纠错</a></div>
+      </div>
+    </article>
+
+    <article class="card" id="plant-heisanleng" data-plant-card data-name="黑三棱" data-habit="emergent" data-search="黑三棱 Sparganium stoloniferum 挺水／湿生 长叶下部背面隆起呈棱；分枝花序上排列多个球状花头，雄花头在上。 湖泊、池塘、溪流及沼泽。 ">
+      <a class="photo-open" href="heisanleng.jpg" data-name="黑三棱" aria-label="放大黑三棱照片" aria-haspopup="dialog">
+        <img src="heisanleng.jpg" alt="黑三棱，2025年项目原有照片" loading="lazy" decoding="async">
+        <span class="photo-hint">点击查看大图</span>
+      </a>
+      <div class="card-body">
+        <div class="card-heading"><h2>黑三棱</h2><span class="habit">挺水／湿生</span></div>
+        <p class="scientific">参考学名：<i lang="la">Sparganium stoloniferum</i></p>
+        
+        <dl>
+          <dt>辨认要点</dt><dd>长叶下部背面隆起呈棱；分枝花序上排列多个球状花头，雄花头在上。</dd>
+          <dt>常见生境</dt><dd>湖泊、池塘、溪流及沼泽。</dd>
+          <dt>观察提示</dt><dd>一根花序分出几条侧枝？大小不同的球状花头怎样排列？</dd>
+        </dl>
+        <div class="card-actions"><a class="source" href="https://www.iplant.cn/foc/pdf/Sparganium.pdf" target="_blank" rel="noopener noreferrer">Flora of China·黑三棱属 ↗</a><a class="feedback-for" href="#participate" data-name="黑三棱">记录或纠错</a></div>
+      </div>
+    </article>
+
+    <article class="card" id="plant-heizao" data-plant-card data-name="黑藻" data-habit="submerged" data-search="黑藻 Hydrilla verticillata 沉水 叶常三至八片绕茎轮生；叶片短而狭长，叶缘有尖细锯齿，中脉明显。 池塘、河沟等淡水水体。 水鳖科水生草本，并非藻类">
+      <a class="photo-open" href="heizao.jpg" data-name="黑藻" aria-label="放大黑藻照片" aria-haspopup="dialog">
+        <img src="heizao.jpg" alt="黑藻，2025年项目原有照片" loading="lazy" decoding="async">
+        <span class="photo-hint">点击查看大图</span>
+      </a>
+      <div class="card-body">
+        <div class="card-heading"><h2>黑藻</h2><span class="habit">沉水</span></div>
+        <p class="scientific">参考学名：<i lang="la">Hydrilla verticillata</i></p>
+        <p class="name-note">水鳖科水生草本，并非藻类</p>
+        <dl>
+          <dt>辨认要点</dt><dd>叶常三至八片绕茎轮生；叶片短而狭长，叶缘有尖细锯齿，中脉明显。</dd>
+          <dt>常见生境</dt><dd>池塘、河沟等淡水水体。</dd>
+          <dt>观察提示</dt><dd>同一个茎节上能数到几片叶？</dd>
+        </dl>
+        <div class="card-actions"><a class="source" href="https://www.iplant.cn/fsz/info/Hydrilla%20verticillata" target="_blank" rel="noopener noreferrer">《深圳植物志》·黑藻 ↗</a><a class="feedback-for" href="#participate" data-name="黑藻">记录或纠错</a></div>
+      </div>
+    </article>
+
+    <article class="card" id="plant-shuicong" data-plant-card data-name="水葱" data-habit="emergent" data-search="水葱 Schoenoplectus tabernaemontani 挺水／湿生 秆直立、粗长而呈圆柱形，叶片很少；褐色小穗聚集成簇，花序看似侧生。 湖岸、池边及浅水地带。 ">
+      <a class="photo-open" href="shuicong.jpg" data-name="水葱" aria-label="放大水葱照片" aria-haspopup="dialog">
+        <img src="shuicong.jpg" alt="水葱，2025年项目原有照片" loading="lazy" decoding="async">
+        <span class="photo-hint">点击查看大图</span>
+      </a>
+      <div class="card-body">
+        <div class="card-heading"><h2>水葱</h2><span class="habit">挺水／湿生</span></div>
+        <p class="scientific">参考学名：<i lang="la">Schoenoplectus tabernaemontani</i></p>
+        
+        <dl>
+          <dt>辨认要点</dt><dd>秆直立、粗长而呈圆柱形，叶片很少；褐色小穗聚集成簇，花序看似侧生。</dd>
+          <dt>常见生境</dt><dd>湖岸、池边及浅水地带。</dd>
+          <dt>观察提示</dt><dd>小穗旁向上伸出的尖条，是否像秆的延长？</dd>
+        </dl>
+        <div class="card-actions"><a class="source" href="https://shflora.ibiodiversity.net/pages/Schoenoplectus_tabernaemontani.html" target="_blank" rel="noopener noreferrer">上海数字植物志·水葱 ↗</a><a class="feedback-for" href="#participate" data-name="水葱">记录或纠错</a></div>
+      </div>
+    </article>
+
+    <article class="card" id="plant-gu" data-plant-card data-name="菰" data-habit="emergent" data-search="菰 Zizania latifolia 挺水／湿生 秆高大直立，节较明显；叶片宽长而扁平，叶鞘与叶片相接处有膜质叶舌。 淡水浅滩、沼泽及水边。 ">
+      <a class="photo-open" href="gu.jpg" data-name="菰" aria-label="放大菰照片" aria-haspopup="dialog">
+        <img src="gu.jpg" alt="菰，2025年项目原有照片" loading="lazy" decoding="async">
+        <span class="photo-hint">点击查看大图</span>
+      </a>
+      <div class="card-body">
+        <div class="card-heading"><h2>菰</h2><span class="habit">挺水／湿生</span></div>
+        <p class="scientific">参考学名：<i lang="la">Zizania latifolia</i></p>
+        
+        <dl>
+          <dt>辨认要点</dt><dd>秆高大直立，节较明显；叶片宽长而扁平，叶鞘与叶片相接处有膜质叶舌。</dd>
+          <dt>常见生境</dt><dd>淡水浅滩、沼泽及水边。</dd>
+          <dt>观察提示</dt><dd>在不采摘的前提下，能否拍到叶片与茎相接处的膜质叶舌？</dd>
+        </dl>
+        <div class="card-actions"><a class="source" href="https://www.iplant.cn/z/frps/34835" target="_blank" rel="noopener noreferrer">《中国植物志》·菰 ↗</a><a class="feedback-for" href="#participate" data-name="菰">记录或纠错</a></div>
+      </div>
+    </article>
+
+    <article class="card" id="plant-zailihua" data-plant-card data-name="再力花" data-habit="emergent" data-search="再力花 Thalia dealbata 挺水／湿生 叶片较大，卵形至披针状椭圆形，具长叶柄；细长花梗顶端聚生深紫色小花。 池塘浅水、湖边及湿地。 植物志名：水竹芋">
+      <a class="photo-open" href="zailihua.jpg" data-name="再力花" aria-label="放大再力花照片" aria-haspopup="dialog">
+        <img src="zailihua.jpg" alt="再力花，2025年项目原有照片" loading="lazy" decoding="async">
+        <span class="photo-hint">点击查看大图</span>
+      </a>
+      <div class="card-body">
+        <div class="card-heading"><h2>再力花</h2><span class="habit">挺水／湿生</span></div>
+        <p class="scientific">参考学名：<i lang="la">Thalia dealbata</i></p>
+        <p class="name-note">植物志名：水竹芋</p>
+        <dl>
+          <dt>辨认要点</dt><dd>叶片较大，卵形至披针状椭圆形，具长叶柄；细长花梗顶端聚生深紫色小花。</dd>
+          <dt>常见生境</dt><dd>池塘浅水、湖边及湿地。</dd>
+          <dt>观察提示</dt><dd>花序的位置比叶片高出多少？</dd>
+        </dl>
+        <div class="card-actions"><a class="source" href="https://www.iplant.cn/fsz/info/Thalia%20dealbata" target="_blank" rel="noopener noreferrer">《深圳植物志》·水竹芋 ↗</a><a class="feedback-for" href="#participate" data-name="再力花">记录或纠错</a></div>
+      </div>
+    </article>
+
+    <article class="card" id="plant-jingsanleng" data-plant-card data-name="荆三棱" data-habit="emergent" data-search="荆三棱 Bolboschoenus yagara 挺水／湿生 秆有明显三棱，叶片狭长；花序下方有数枚叶状苞片，通常伸得比花序更长。 湖滨浅水、沼泽及湿地。 ">
+      <a class="photo-open" href="jingsanleng.jpg" data-name="荆三棱" aria-label="放大荆三棱照片" aria-haspopup="dialog">
+        <img src="jingsanleng.jpg" alt="荆三棱，2025年项目原有照片" loading="lazy" decoding="async">
+        <span class="photo-hint">点击查看大图</span>
+      </a>
+      <div class="card-body">
+        <div class="card-heading"><h2>荆三棱</h2><span class="habit">挺水／湿生</span></div>
+        <p class="scientific">参考学名：<i lang="la">Bolboschoenus yagara</i></p>
+        
+        <dl>
+          <dt>辨认要点</dt><dd>秆有明显三棱，叶片狭长；花序下方有数枚叶状苞片，通常伸得比花序更长。</dd>
+          <dt>常见生境</dt><dd>湖滨浅水、沼泽及湿地。</dd>
+          <dt>观察提示</dt><dd>花序下的叶状苞片是否明显超过花序？</dd>
+        </dl>
+        <div class="card-actions"><a class="source" href="https://shflora.ibiodiversity.net/pages/Bolboschoenus_yagara.html" target="_blank" rel="noopener noreferrer">上海数字植物志·荆三棱 ↗</a><a class="feedback-for" href="#participate" data-name="荆三棱">记录或纠错</a></div>
+      </div>
+    </article>
+
+    <article class="card" id="plant-hualin" data-plant-card data-name="花蔺" data-habit="emergent" data-search="花蔺 Butomus umbellatus 挺水／湿生 狭长叶片从基部成丛抽出；粉白至粉红小花在较高的花茎顶端呈伞状聚集。 池塘、沟渠的浅水与湿岸。 ">
+      <a class="photo-open" href="hualin.jpg" data-name="花蔺" aria-label="放大花蔺照片" aria-haspopup="dialog">
+        <img src="hualin.jpg" alt="花蔺，2025年项目原有照片" loading="lazy" decoding="async">
+        <span class="photo-hint">点击查看大图</span>
+      </a>
+      <div class="card-body">
+        <div class="card-heading"><h2>花蔺</h2><span class="habit">挺水／湿生</span></div>
+        <p class="scientific">参考学名：<i lang="la">Butomus umbellatus</i></p>
+        
+        <dl>
+          <dt>辨认要点</dt><dd>狭长叶片从基部成丛抽出；粉白至粉红小花在较高的花茎顶端呈伞状聚集。</dd>
+          <dt>常见生境</dt><dd>池塘、沟渠的浅水与湿岸。</dd>
+          <dt>观察提示</dt><dd>各朵小花的花梗是否从花序顶端近同一点伸出？</dd>
+        </dl>
+        <div class="card-actions"><a class="source" href="https://www.iplant.cn/foc/pdf/Butomaceae.pdf" target="_blank" rel="noopener noreferrer">Flora of China·花蔺科 ↗</a><a class="feedback-for" href="#participate" data-name="花蔺">记录或纠错</a></div>
+      </div>
+    </article>
+
+    <article class="card" id="plant-fuyeyanzicai" data-plant-card data-name="浮叶眼子菜" data-habit="floating" data-search="浮叶眼子菜 Potamogeton natans 浮叶 浮叶卵形至椭圆形，质地较厚；叶柄紧接叶片处有柔软关节，常形成折角。 湖泊、池塘及沟渠静水。 兼有沉水叶，按主要生活型归类">
+      <a class="photo-open" href="fuyeyanzicai.jpg" data-name="浮叶眼子菜" aria-label="放大浮叶眼子菜照片" aria-haspopup="dialog">
+        <img src="fuyeyanzicai.jpg" alt="浮叶眼子菜，2025年项目原有照片" loading="lazy" decoding="async">
+        <span class="photo-hint">点击查看大图</span>
+      </a>
+      <div class="card-body">
+        <div class="card-heading"><h2>浮叶眼子菜</h2><span class="habit">浮叶</span></div>
+        <p class="scientific">参考学名：<i lang="la">Potamogeton natans</i></p>
+        <p class="name-note">兼有沉水叶，按主要生活型归类</p>
+        <dl>
+          <dt>辨认要点</dt><dd>浮叶卵形至椭圆形，质地较厚；叶柄紧接叶片处有柔软关节，常形成折角。</dd>
+          <dt>常见生境</dt><dd>湖泊、池塘及沟渠静水。</dd>
+          <dt>观察提示</dt><dd>同一株上能否找到狭长沉水叶和椭圆浮叶？</dd>
+        </dl>
+        <div class="card-actions"><a class="source" href="https://www.iplant.cn/foc/pdf/Potamogeton.pdf" target="_blank" rel="noopener noreferrer">Flora of China·眼子菜属 ↗</a><a class="feedback-for" href="#participate" data-name="浮叶眼子菜">记录或纠错</a></div>
+      </div>
+    </article>
+
+    <article class="card" id="plant-bichiyanzicai" data-plant-card data-name="篦齿眼子菜" data-habit="submerged" data-search="篦齿眼子菜 Stuckenia pectinata 沉水 茎细长且多分枝，叶细如丝线；叶片基部与托叶部分连合，形成包住茎的叶鞘。 淡水或微咸水湖塘、沟渠。 ">
+      <a class="photo-open" href="bichiyanzicai.jpg" data-name="篦齿眼子菜" aria-label="放大篦齿眼子菜照片" aria-haspopup="dialog">
+        <img src="bichiyanzicai.jpg" alt="篦齿眼子菜，2025年项目原有照片" loading="lazy" decoding="async">
+        <span class="photo-hint">点击查看大图</span>
+      </a>
+      <div class="card-body">
+        <div class="card-heading"><h2>篦齿眼子菜</h2><span class="habit">沉水</span></div>
+        <p class="scientific">参考学名：<i lang="la">Stuckenia pectinata</i></p>
+        
+        <dl>
+          <dt>辨认要点</dt><dd>茎细长且多分枝，叶细如丝线；叶片基部与托叶部分连合，形成包住茎的叶鞘。</dd>
+          <dt>常见生境</dt><dd>淡水或微咸水湖塘、沟渠。</dd>
+          <dt>观察提示</dt><dd>细叶基部是否有包住茎的鞘状结构？</dd>
+        </dl>
+        <div class="card-actions"><a class="source" href="https://shflora.ibiodiversity.net/pages/Stuckenia_pectinata.html" target="_blank" rel="noopener noreferrer">上海数字植物志·篦齿眼子菜 ↗</a><a class="feedback-for" href="#participate" data-name="篦齿眼子菜">记录或纠错</a></div>
+      </div>
+    </article>
+
+    <article class="card" id="plant-jinyuzao" data-plant-card data-name="金鱼藻" data-habit="submerged" data-search="金鱼藻 Ceratophyllum demersum 沉水 叶片绕茎轮生；每片叶分叉一至两次，裂片细长，展开后形似小树杈。 池塘、河沟及湖泊水中。 ">
+      <a class="photo-open" href="jinyuzao.jpg" data-name="金鱼藻" aria-label="放大金鱼藻照片" aria-haspopup="dialog">
+        <img src="jinyuzao.jpg" alt="金鱼藻，2025年项目原有照片" loading="lazy" decoding="async">
+        <span class="photo-hint">点击查看大图</span>
+      </a>
+      <div class="card-body">
+        <div class="card-heading"><h2>金鱼藻</h2><span class="habit">沉水</span></div>
+        <p class="scientific">参考学名：<i lang="la">Ceratophyllum demersum</i></p>
+        
+        <dl>
+          <dt>辨认要点</dt><dd>叶片绕茎轮生；每片叶分叉一至两次，裂片细长，展开后形似小树杈。</dd>
+          <dt>常见生境</dt><dd>池塘、河沟及湖泊水中。</dd>
+          <dt>观察提示</dt><dd>一片叶是叉状分裂，还是沿主轴羽状分裂？</dd>
+        </dl>
+        <div class="card-actions"><a class="source" href="https://www.iplant.cn/fsz/info/Ceratophyllum%20demersum" target="_blank" rel="noopener noreferrer">《深圳植物志》·金鱼藻 ↗</a><a class="feedback-for" href="#participate" data-name="金鱼藻">记录或纠错</a></div>
+      </div>
+    </article>
+
+    <article class="card" id="plant-huweizao" data-plant-card data-name="狐尾藻" data-habit="submerged emergent" data-search="狐尾藻 Myriophyllum sp. 沉水／部分种兼挺水 沉水叶多绕茎轮生；每片叶沿一条主轴羽状细裂，细长裂片排列在主轴两侧。 池塘、沟渠及其他浅水湿地。 属级参考，种待核">
+      <a class="photo-open" href="huweizao.jpg" data-name="狐尾藻" aria-label="放大狐尾藻照片" aria-haspopup="dialog">
+        <img src="huweizao.jpg" alt="狐尾藻，2025年项目原有照片" loading="lazy" decoding="async">
+        <span class="photo-hint">点击查看大图</span>
+      </a>
+      <div class="card-body">
+        <div class="card-heading"><h2>狐尾藻</h2><span class="habit">沉水／部分种兼挺水</span></div>
+        <p class="scientific">参考学名：<i lang="la">Myriophyllum sp.</i></p>
+        <p class="name-note">属级参考，种待核</p>
+        <dl>
+          <dt>辨认要点</dt><dd>沉水叶多绕茎轮生；每片叶沿一条主轴羽状细裂，细长裂片排列在主轴两侧。</dd>
+          <dt>常见生境</dt><dd>池塘、沟渠及其他浅水湿地。</dd>
+          <dt>观察提示</dt><dd>水下叶与伸出水面的叶，形状是否相同？</dd>
+        </dl>
+        <div class="card-actions"><a class="source" href="https://www.iplant.cn/foc/pdf/Myriophyllum.pdf" target="_blank" rel="noopener noreferrer">Flora of China·狐尾藻属 ↗</a><a class="feedback-for" href="#participate" data-name="狐尾藻">记录或纠错</a></div>
+      </div>
+    </article>
+
+    <article class="card" id="plant-guangyeyanzicai" data-plant-card data-name="光叶眼子菜" data-habit="submerged" data-search="光叶眼子菜 Potamogeton lucens 沉水 沉水叶较宽，椭圆形至披针状椭圆形；近无柄或具短柄，叶尖常有小尖头。 湖泊、池塘及沟渠水中。 ">
+      <a class="photo-open" href="guangyeyanzicai.jpg" data-name="光叶眼子菜" aria-label="放大光叶眼子菜照片" aria-haspopup="dialog">
+        <img src="guangyeyanzicai.jpg" alt="光叶眼子菜，2025年项目原有照片" loading="lazy" decoding="async">
+        <span class="photo-hint">点击查看大图</span>
+      </a>
+      <div class="card-body">
+        <div class="card-heading"><h2>光叶眼子菜</h2><span class="habit">沉水</span></div>
+        <p class="scientific">参考学名：<i lang="la">Potamogeton lucens</i></p>
+        
+        <dl>
+          <dt>辨认要点</dt><dd>沉水叶较宽，椭圆形至披针状椭圆形；近无柄或具短柄，叶尖常有小尖头。</dd>
+          <dt>常见生境</dt><dd>湖泊、池塘及沟渠水中。</dd>
+          <dt>观察提示</dt><dd>叶片基部是否有短柄，还是直接连在茎上？</dd>
+        </dl>
+        <div class="card-actions"><a class="source" href="https://www.iplant.cn/foc/pdf/Potamogeton.pdf" target="_blank" rel="noopener noreferrer">Flora of China·眼子菜属 ↗</a><a class="feedback-for" href="#participate" data-name="光叶眼子菜">记录或纠错</a></div>
+      </div>
+    </article>
+
+    <article class="card" id="plant-zucao" data-plant-card data-name="菹草" data-habit="submerged" data-search="菹草 Potamogeton crispus 沉水 叶片狭长，边缘多呈波浪状；叶缘有锯齿，枝上有时可见紧实的休眠芽。 湖泊、池塘、溪流及水田。 ">
+      <a class="photo-open" href="zucao.jpg" data-name="菹草" aria-label="放大菹草照片" aria-haspopup="dialog">
+        <img src="zucao.jpg" alt="菹草，2025年项目原有照片" loading="lazy" decoding="async">
+        <span class="photo-hint">点击查看大图</span>
+      </a>
+      <div class="card-body">
+        <div class="card-heading"><h2>菹草</h2><span class="habit">沉水</span></div>
+        <p class="scientific">参考学名：<i lang="la">Potamogeton crispus</i></p>
+        
+        <dl>
+          <dt>辨认要点</dt><dd>叶片狭长，边缘多呈波浪状；叶缘有锯齿，枝上有时可见紧实的休眠芽。</dd>
+          <dt>常见生境</dt><dd>湖泊、池塘、溪流及水田。</dd>
+          <dt>观察提示</dt><dd>放大照片后，能否同时看清波浪叶缘和细锯齿？</dd>
+        </dl>
+        <div class="card-actions"><a class="source" href="https://www.iplant.cn/foc/pdf/Potamogeton.pdf" target="_blank" rel="noopener noreferrer">Flora of China·眼子菜属 ↗</a><a class="feedback-for" href="#participate" data-name="菹草">记录或纠错</a></div>
+      </div>
+    </article>
+
+    <article class="card" id="plant-kucao" data-plant-card data-name="苦草" data-habit="submerged" data-search="苦草 Vallisneria sp. 沉水 叶片多从基部成簇抽出，形成长带状叶丛；叶上有多条纵向平行叶脉。 湖泊、池塘等淡水水体。 属级参考，种待核">
+      <a class="photo-open" href="kucao.jpg" data-name="苦草" aria-label="放大苦草照片" aria-haspopup="dialog">
+        <img src="kucao.jpg" alt="苦草，2025年项目原有照片" loading="lazy" decoding="async">
+        <span class="photo-hint">点击查看大图</span>
+      </a>
+      <div class="card-body">
+        <div class="card-heading"><h2>苦草</h2><span class="habit">沉水</span></div>
+        <p class="scientific">参考学名：<i lang="la">Vallisneria sp.</i></p>
+        <p class="name-note">属级参考，种待核</p>
+        <dl>
+          <dt>辨认要点</dt><dd>叶片多从基部成簇抽出，形成长带状叶丛；叶上有多条纵向平行叶脉。</dd>
+          <dt>常见生境</dt><dd>湖泊、池塘等淡水水体。</dd>
+          <dt>观察提示</dt><dd>这些长叶是否从同一基部叶丛抽出？</dd>
+        </dl>
+        <div class="card-actions"><a class="source" href="https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:30023196-2/general-information" target="_blank" rel="noopener noreferrer">英国皇家植物园·苦草属 ↗</a><a class="feedback-for" href="#participate" data-name="苦草">记录或纠错</a></div>
+      </div>
+    </article>
+      </div>
+    </section>
+
+    <section id="participate" class="participate" aria-labelledby="participate-title">
+      <div class="participate-intro">
+        <p class="section-kicker">让一次观察留下记录</p>
+        <h2 id="participate-title">参与观察与纠错</h2>
+        <p>在城市公园发现了这些植物，或发现卡片里有值得核对的地方？记下看到的特征、观察地点与依据，让记录便于复查。</p>
+        <p class="privacy-note"><strong>公开反馈提示：</strong>本页先生成预览，不会自动上传。点击“前往 GitHub 确认提交”后，需要登录 GitHub 并再次提交；内容和 GitHub 用户名将公开可见。请勿填写姓名、电话、学校班级、精确行踪等个人信息。无需公开提交时，可只下载记录。</p>
+        <p class="small">新增反馈不自动成为图鉴结论；核对后再更新网页。可在 GitHub 的同一条反馈中继续补充信息。</p>
+        <a href="https://github.com/acwangyan-cloud/shishui/issues" target="_blank" rel="noopener noreferrer">查看已有公开反馈 ↗</a>
+      </div>
+      <form id="feedback-form" class="feedback-form">
+        <div class="form-row">
+          <div><label for="feedback-type">记录类型</label><select id="feedback-type" name="type"><option value="observation">观察记录</option><option value="correction">内容纠错</option></select></div>
+          <div><label for="feedback-plant">相关植物（选填）</label><select id="feedback-plant" name="plant"><option value="">未确定／其他植物</option><option value="荇菜">荇菜</option><option value="千屈菜">千屈菜</option><option value="睡莲">睡莲</option><option value="荷">荷</option><option value="芦苇">芦苇</option><option value="假稻">假稻</option><option value="菖蒲">菖蒲</option><option value="黄菖蒲">黄菖蒲</option><option value="香蒲">香蒲</option><option value="慈菇">慈菇</option><option value="泽泻">泽泻</option><option value="黑三棱">黑三棱</option><option value="黑藻">黑藻</option><option value="水葱">水葱</option><option value="菰">菰</option><option value="再力花">再力花</option><option value="荆三棱">荆三棱</option><option value="花蔺">花蔺</option><option value="浮叶眼子菜">浮叶眼子菜</option><option value="篦齿眼子菜">篦齿眼子菜</option><option value="金鱼藻">金鱼藻</option><option value="狐尾藻">狐尾藻</option><option value="光叶眼子菜">光叶眼子菜</option><option value="菹草">菹草</option><option value="苦草">苦草</option></select></div>
+        </div>
+        <div class="form-row">
+          <div><label for="feedback-park">公园或公共场所（选填）</label><input id="feedback-park" name="park" list="survey-parks" placeholder="例如：玉渊潭公园，不填精确位置" aria-describedby="park-help"><small id="park-help">最多80字，不填家庭住址或个人行踪。</small></div>
+          <div><label for="feedback-date">观察日期（选填）</label><input id="feedback-date" name="date" type="date"></div>
+        </div>
+        <datalist id="survey-parks"><option value="北海公园"></option><option value="北京动物园"></option><option value="紫竹院公园"></option><option value="玉渊潭公园"></option><option value="陶然亭公园"></option><option value="西海湿地公园"></option></datalist>
+        <label for="feedback-detail">观察或纠错内容 <span class="required">（必填）</span></label>
+        <textarea id="feedback-detail" name="detail" rows="5" required aria-describedby="detail-help" placeholder="观察：看到哪些叶形、花形或生境特征？哪些地方还不确定？&#10;纠错：哪一处内容需要核对？建议如何修改，有什么依据？"></textarea>
+        <small id="detail-help">10—600字。请区分亲眼观察、参考资料和自己的推测。</small>
+        <label for="feedback-source">参考资料链接（选填）</label>
+        <input id="feedback-source" name="source" type="url" placeholder="https://…" aria-describedby="source-help">
+        <small id="source-help">仅填写公开的 http 或 https 链接，最多300字；不要填写私人文件或带访问密钥的链接。</small>
+        <div class="form-actions"><button id="preview-submit" type="submit" disabled data-js-enable>生成预览</button><span class="small">预览不等于已提交</span></div>
+        <p id="feedback-status" role="status" aria-live="polite"></p>
+        <noscript><p>请启用 JavaScript 生成预览，或直接到 <a href="https://github.com/acwangyan-cloud/shishui/issues/new" target="_blank" rel="noopener noreferrer">GitHub 填写公开反馈</a>。</p></noscript>
+      </form>
+      <div id="feedback-preview" class="feedback-preview" hidden>
+        <h3>反馈预览</h3>
+        <p class="small">以下内容尚未提交。请检查是否包含个人信息；照片可在 GitHub 编辑反馈时自行附上，注意隐私与图片使用权。</p>
+        <pre id="feedback-preview-text"></pre>
+        <div class="preview-actions">
+          <a id="feedback-github-link" class="button-link" target="_blank" rel="noopener noreferrer">前往 GitHub 确认提交 ↗</a>
+          <button id="feedback-download" class="secondary" type="button">下载记录（TXT）</button>
+          <button id="feedback-edit" class="text-button" type="button">返回修改</button>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <dialog id="photo-dialog" aria-labelledby="photo-title">
+    <div class="dialog-heading"><h2 id="photo-title">植物照片</h2><button id="photo-close" class="secondary" type="button" autofocus>关闭大图</button></div>
+    <img id="photo-image" alt="">
+    <div class="dialog-footer"><span>原始照片，不裁切展示。按 Esc 可关闭。</span><a id="photo-original" target="_blank" rel="noopener noreferrer">查看原图 ↗</a></div>
+  </dialog>
+
   <footer class="page-notes">
-    <p><strong>资料与观察：</strong>本页保留2025年项目原有照片。本次文字校订的参考资料见对应条目；文字校订不等于完成照片的专家鉴定。具体拍摄地点、日期及存疑的植物名称，仍需结合原始记录核对。</p>
+    <p><strong>资料与观察：</strong>本页保留2025年项目原有照片。卡片中的辨认要点、常见生境与参考学名依据所列资料整理，不代替照片的专家鉴定；观察提示供实地记录使用，不是既有调查结果。具体拍摄地点、日期及存疑的植物名称，仍需结合原始记录核对。</p>
     <p><strong>文明观察：</strong>请在开放区域观察和拍照，不采摘、不投放植物，不涉水取样，也不要依据网页介绍自行食用或药用野生植物。</p>
-    <p><a href="#top">返回顶部</a></p>
+    <p><a href="#top">返回顶部 ↑</a></p>
   </footer>
 </body>
 </html>
-
